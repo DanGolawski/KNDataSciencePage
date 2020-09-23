@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 4vh;
+    background: red;
+}
+
+.elementsContainer {
+    width: 100%;
+    min-height: 40px;
+    height: auto;
+    background: green;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+}
+
+#projectsContainer {
+    width: 100%;
+    min-height: 40px;
+    height: auto;
+    background: yellow;
+}
+
+.elementContainer {
+    position: relative;
+    width: 200px;
+    height: auto;
+    background: darkgray;
+    margin: 10px;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.elementImage {
+    width: 200px;
+    height: 200px;
+}
+
+.elementText {
+    text-align: center;
+}
+
+.deleteButton {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+    opacity: 0.6;
+    background-image: url('../images/deleteButtonIcon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.deleteButton:hover {
+    opacity: 1;
+}
+
+.downloadButton {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+    opacity: 0.6;
+    background-image: url('../images/downloadButtonIcon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.downloadButton:hover {
+    opacity: 1;
+}
+
+button {
+    cursor: pointer;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- !!! UZUPELNIC TRESC !!! -->
+    <meta name="description" content="KNDS" />
+    <meta name="keywords" content="KNDS" />
+    <meta name="author" content="Daniel Golawski" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-storage.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/FirebaseClient.js"></script>
+    <title>ADMIN - KN Data Science</title>
+</head>
+
+<body>
+    <header>
+        <button id="hb3" class="headerButton" onclick="window.location.href='admin-delete.html'">Dashboard</button>
+    </header>
+    <div id="actionsContainer">
+        <div id="additionField" class="actionField">
+            <select id="cardSelector">
+                <option value=""></option>
+                <option value="Events">Events</option>
+                <option value="Projects">Projects</option>
+                <option value="AboutUs">AboutUs</option>
+            </select>
+            <label for="title">Title</label>
+            <input type="text" id="title" class="contentInput" required>
+            <label for="date">Date</label>
+            <input type="date" id="date" class="contentInput" required>
+            <label for="description">Description</label>
+            <input type="text" id="description" class="contentInput" required>
+            <input id="fileInput" type="file" />
+            <button id="submitButton">Submit</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
