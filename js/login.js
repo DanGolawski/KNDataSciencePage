@@ -6,7 +6,7 @@ window.onload = () => {
     let ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 
-    var uiConfig = {
+    let uiConfig = {
         callbacks: {
             signInSuccessWithAuthResult: function (authResult, redirectUrl) {
                 // User successfully signed in.
@@ -37,9 +37,9 @@ window.onload = () => {
 
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            alert('User is signed in')
+            // alert('User is signed in')
         } else {
-            alert('No user is signed in')
+            // alert('No user is signed in')
         }
     });
 

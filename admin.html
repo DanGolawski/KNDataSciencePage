@@ -23,6 +23,7 @@
     </header>
     <div id="actionsContainer">
         <div id="additionField" class="actionField">
+            <label for="cardSelector">Folder</label>
             <select id="cardSelector">
                 <option value=""></option>
                 <option value="Events">Events</option>
@@ -34,7 +35,9 @@
             <label for="date">Date</label>
             <input type="date" id="date" class="contentInput" required>
             <label for="description">Description</label>
-            <input type="text" id="description" class="contentInput" required>
+            <!-- <input type="text" id="description" class="contentInput" required> -->
+            <textarea id="description" rows="10"></textarea>
+            <label for="fileInput">File</label>
             <input id="fileInput" type="file" />
             <button id="submitButton">Submit</button>
         </div>

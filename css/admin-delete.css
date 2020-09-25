@@ -3,16 +3,21 @@
     padding: 0;
 }
 
+body {
+    background: #d6f8ff;
+}
+
 header {
-    height: 4vh;
-    background: red;
+    height: auto;
+    background: cornflowerblue;
+    padding: 10px;
 }
 
 .elementsContainer {
     width: 100%;
     min-height: 40px;
     height: auto;
-    background: green;
+    /* background: green; */
     display: grid;
     grid-template-columns: repeat(auto-fill, 220px);
     grid-auto-rows: auto;
@@ -23,7 +28,7 @@ header {
     width: 100%;
     min-height: 40px;
     height: auto;
-    background: yellow;
+    /* background: yellow; */
 }
 
 .elementContainer {
@@ -37,11 +42,13 @@ header {
     -ms-transition: opacity 0.3s ease-in-out;
     -o-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
+    border-radius: 15px;
 }
 
 .elementImage {
     width: 200px;
     height: 200px;
+    border-radius: 15px 15px 0 0;
 }
 
 .elementText {
@@ -84,5 +91,6 @@ header {
 
 button {
     cursor: pointer;
+    padding: 10px;
 }
 
