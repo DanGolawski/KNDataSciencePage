@@ -3,6 +3,7 @@ window.onload = () => {
     const TEXT_CLASS = 'elementText';
     const IMAGE_CLASS = 'elementImage';
     const CONTAINER_CLASS = 'elementContainer';
+    let login = sessionStorage.getItem('login');
 
     const firebaseClient = new FirebaseClient(firebase);
 
@@ -17,12 +18,13 @@ window.onload = () => {
     function signIn() {
         const signInButton = document.querySelector('#signInButton');
         signInButton.addEventListener('click', () => {
-            let login = document.querySelector('#loginField').value;
+            login = document.querySelector('#loginField').value;
             let password = document.querySelector('#passwordField').value;
             let result = firebaseClient.signIn(login, password);
             result.then(res => {
                 if (res) {
                     sessionStorage.setItem("loggedIn", 'true');
+                    sessionStorage.setItem("login", login)
                     startApplication();
                 }
             })
@@ -44,7 +46,11 @@ window.onload = () => {
 
     function displayElements(elements, containerName, folder) {
         let container = document.querySelector(`#${containerName}`);
-        for (const element of elements) {
+        console.log(elements)
+        for (let element of elements) {
+            if (element.values.login !== login) {
+                continue;
+            }
             let elementStruct = createElementStruct(element, folder);
             container.appendChild(elementStruct);
         }

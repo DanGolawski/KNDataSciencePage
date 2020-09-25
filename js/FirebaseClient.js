@@ -24,7 +24,6 @@ class FirebaseClient {
     }
 
     async signIn(login, password) {
-        console.log(login, password);
         return firebase.auth().signInWithEmailAndPassword(login, password).then((value) => {
             return true;
         }).catch((error) => {
@@ -57,7 +56,8 @@ class FirebaseClient {
             title: fileData.title,
             date: fileData.date.split('-').reverse().join('-'),
             description: fileData.description,
-            imageURL: url
+            imageURL: url,
+            login: sessionStorage.getItem('login')
         }
         this.database.ref('content/' + fileData.card).push(request);
         alert('The process is completed')
@@ -83,7 +83,7 @@ class FirebaseClient {
         let elements = [];
         snapshot.forEach(child => {
             elements.push({ key: child.key, values: child.val() })
-        })
+        });
         return elements;
     }
 
