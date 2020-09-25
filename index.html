@@ -1,142 +1,37 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,400' rel='stylesheet' type='text/css'>
-	<!-- 	<script type="text/javascript" src="http://www.queness.com/js/bsa.js"></script>	 -->
-	<script src="./js/hexagonController.js"></script>
-	<script type="text/javascript" src="./js/index.js"></script>
-	<link rel="stylesheet" href="css/styles.css" />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="KNDS" />
+    <meta name="keywords" content="KNDS" />
+    <meta name="author" content="Daniel Golawski" />
+    <link rel="stylesheet" type="text/css" href="css/admin-dashboard.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-storage.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+    <script src="js/FirebaseClient.js"></script>
+    <title>ADMIN</title>
 </head>
 
 <body>
-	<div id="container">
-
-		<!-- hex-1 hex-gap-->
-		<div class="hex">
-			<div class="inner">
-				<h4>PAGE</h4>
-				<!-- <hr /> -->
-				<p>Home Sweet Home</p>
-			</div>
-			<a href="page.html"></a>
-			<div class="corner-1"></div>
-			<div class="corner-2"></div>
-		</div>
-
-		<!--  hex-3-->
-		<div class="hex">
-			<div class="inner">
-				<h4>CONTACT US</h4>
-				<!-- <hr /> -->
-				<p>We Open Everyday</p>
-			</div>
-			<a href="#"></a>
-			<div class="corner-1"></div>
-			<div class="corner-2"></div>
-		</div>
-
-		<!-- style="background-image: url(images/panamera.jpg);" -->
-		<div class="hex">
-			<div class="inner">
-				<h4>CONTACT US</h4>
-				<!-- <hr /> -->
-				<p>We Open Everyday</p>
-			</div>
-			<a href="#"></a>
-			<div class="corner-1"></div>
-			<div class="corner-2"></div>
-		</div>
-
-		<!-- style="background-image: url(images/3.jpg);" -->
-		<div class="hex">
-			<div class="inner">
-				<h4>CONTACT US</h4>
-				<!-- <hr /> -->
-				<p>We Open Everyday</p>
-			</div>
-			<a href="#"></a>
-			<div class="corner-1"></div>
-			<div class="corner-2"></div>
-		</div>
-
-		<!-- style="background-image: url(images/4.jpg);" -->
-		<div class="hex">
-			<div class="inner">
-				<h4>CONTACT US</h4>
-				<!-- <hr /> -->
-				<p>We Open Everyday</p>
-			</div>
-			<a href="#"></a>
-			<div class="corner-1"></div>
-			<div class="corner-2"></div>
-		</div>
-
-		<!-- style="background-image: url(images/5.jpg);" -->
-		<div class="hex">
-			<div class="inner">
-				<h4>CONTACT US</h4>
-				<!-- <hr /> -->
-				<p>We Open Everyday</p>
-			</div>
-			<a href="#"></a>
-			<div class="corner-1"></div>
-			<div class="corner-2"></div>
-		</div>
-
-		<!-- style="background-image: url(images/6.jpg);" -->
-		<div class="hex">
-			<div class="inner">
-				<h4>CONTACT US</h4>
-				<!-- <hr /> -->
-				<p>We Open Everyday</p>
-			</div>
-			<a href="#"></a>
-			<div class="corner-1"></div>
-			<div class="corner-2"></div>
-		</div>
-
-		<!-- style="background-image: url(images/6.jpg);" -->
-		<div class="hex">
-			<div class="inner">
-				<h4>CONTACT US</h4>
-				<!-- <hr /> -->
-				<p>We Open Everyday</p>
-			</div>
-			<a href="#"></a>
-			<div class="corner-1"></div>
-			<div class="corner-2"></div>
-		</div>
-
-		<!-- style="background-image: url(images/6.jpg);" -->
-		<div class="hex">
-			<div class="inner">
-				<h4>CONTACT US</h4>
-				<!-- <hr /> -->
-				<p>We Open Everyday</p>
-			</div>
-			<a href="#"></a>
-			<div class="corner-1"></div>
-			<div class="corner-2"></div>
-		</div>
-
-		<!-- style="background-image: url(images/6.jpg);" -->
-		<div class="hex">
-			<div class="inner">
-				<h4>CONTACT US</h4>
-				<!-- <hr /> -->
-				<p>We Open Everyday</p>
-			</div>
-			<a href="#"></a>
-			<div class="corner-1"></div>
-			<div class="corner-2"></div>
-		</div>
-	</div>
-
+    <div id="loginContainer" class="loggedOut">
+        <div id="loginForm">
+            <label for="loginField">LOGIN</label>
+            <input type="text" id="loginField">
+            <label for="passwordField">PASSWORD</label>
+            <input type="password" id="passwordField">
+            <button id="signInButton">SIGN IN</button>
+        </div>
+    </div>
+    <header>
+        <button id="hb1" class="headerButton" onclick="window.location.href='admin.html'">Add Content</button>
+    </header>
+    <div class="elementsContainer" id="eventsContainer"></div>
+    <div class="elementsContainer" id="projectsContainer"></div>
 </body>
 
 </html>
