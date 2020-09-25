@@ -3,16 +3,43 @@ window.onload = () => {
     const TEXT_CLASS = 'elementText';
     const IMAGE_CLASS = 'elementImage';
     const CONTAINER_CLASS = 'elementContainer';
+
     const firebaseClient = new FirebaseClient(firebase);
 
-    const promiseEvents = firebaseClient.getElementsFromFolder('Events');
-    const promiseProjects = firebaseClient.getElementsFromFolder('Projects');
+    if (sessionStorage.getItem('loggedIn') === 'true') {
+        startApplication();
+    }
+    else {
+        signIn();
+    }
 
-    promiseEvents.then(elements => displayElements(elements, 'eventsContainer', 'Events'));
-    promiseProjects.then(elements => displayElements(elements, 'projectsContainer', 'Projects'));
+
+    function signIn() {
+        const signInButton = document.querySelector('#signInButton');
+        signInButton.addEventListener('click', () => {
+            let login = document.querySelector('#loginField').value;
+            let password = document.querySelector('#passwordField').value;
+            let result = firebaseClient.signIn(login, password);
+            result.then(res => {
+                if (res) {
+                    sessionStorage.setItem("loggedIn", 'true');
+                    startApplication();
+                }
+            })
+        });
+    }
 
 
 
+    function startApplication() {
+        document.querySelector('#loginContainer').classList.toggle('loggedIn');
+
+        const promiseEvents = firebaseClient.getElementsFromFolder('Events');
+        const promiseProjects = firebaseClient.getElementsFromFolder('Projects');
+
+        promiseEvents.then(elements => displayElements(elements, 'eventsContainer', 'Events'));
+        promiseProjects.then(elements => displayElements(elements, 'projectsContainer', 'Projects'));
+    }
 
 
     function displayElements(elements, containerName, folder) {
@@ -101,4 +128,5 @@ window.onload = () => {
         field.setAttribute('text', text);
         return field;
     }
+
 }

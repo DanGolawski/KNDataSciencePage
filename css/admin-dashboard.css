@@ -7,6 +7,53 @@ body {
     background: #d6f8ff;
 }
 
+#loginContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: darkgrey;
+    z-index: 2;
+}
+
+#loginForm {
+    position: absolute;
+    width: 60vw;
+    left: 20vw;
+    right: 20vw;
+    height: auto;
+    margin: auto;
+    top: 30vh;
+    background: white;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    border-radius: 20px;
+}
+
+#signInButton {
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+}
+
+.loggedOut {
+    visibility: visible;
+}
+
+.loggedIn {
+    visibility: hidden;
+}
+
+#loginField, #passwordField {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+label {
+    margin-left: 10%;
+}
+
 header {
     height: auto;
     background: cornflowerblue;

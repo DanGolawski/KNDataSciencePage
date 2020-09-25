@@ -1,7 +1,6 @@
 class FirebaseClient {
 
     constructor(firebase) {
-        this.fb = firebase;
         const firebaseConfig = this.getFirebaseConfig();
         firebase.initializeApp(firebaseConfig);
         this.database = firebase.database();
@@ -24,8 +23,17 @@ class FirebaseClient {
         };
     }
 
-    // Promise
-
+    async signIn(login, password) {
+        console.log(login, password);
+        return firebase.auth().signInWithEmailAndPassword(login, password).then((value) => {
+            return true;
+        }).catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert(errorMessage, errorCode);
+            return false;
+        });
+    }
 
     sendFile(fileData) {
         console.log('file upload')
