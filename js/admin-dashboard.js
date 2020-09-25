@@ -66,6 +66,7 @@ window.onload = () => {
         let dateField = createTextField(object.values.date);
         let image = createImage(object.values.imageURL)
         let description = createDescription(object.values.description)
+        let copyButton = createCopyButton(object);
 
         container.appendChild(image);
         container.appendChild(titleField);
@@ -73,7 +74,28 @@ window.onload = () => {
         container.appendChild(description)
         container.appendChild(deleteButton);
         container.appendChild(downloadButton);
+        container.appendChild(copyButton);
         return container;
+    }
+
+    function createCopyButton(object) {
+        let copyButton = document.createElement('div');
+        copyButton.classList.add('copyButton');
+        copyButton.addEventListener('click', () => {
+            var dummy = document.createElement("textarea");
+            // to avoid breaking orgain page when copying more words
+            // cant copy when adding below this code
+            // dummy.style.display = 'none'
+            document.body.appendChild(dummy);
+            //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+            dummy.value = object.values.imageURL;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            alert('copied');
+        });
+        return copyButton;
+
     }
 
     function createDeleteButton(object, folder) {
