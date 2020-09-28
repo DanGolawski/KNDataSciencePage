@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- !!! UZUPELNIC TRESC !!! -->
+    <meta name="description" content="KNDS" />
+    <meta name="keywords" content="KNDS" />
+    <meta name="author" content="Daniel Golawski" />
+    <link rel="stylesheet" type="text/css" href="css/page.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-storage.js"></script>
+    <script src="js/page-events.js"></script>
+    <script src="js/FirebaseClient.js"></script>
+    <title>Events - KN Data Science</title>
+</head>
+
+<body>
+    <main>
+        <div id="mainContainer">
+            <h1 id="mainHeader">
+                Events</h1>
+            <div id="meta">
+                <a href="#" class="dateLink">2020</a>
+                <a href="#" class="dateLink">2019</a>
+                <a href="#" class="dateLink">2018</a>
+                <a href="#" class="dateLink">2017</a>
+                <a href="#" class="dateLink">2016</a>
+                <a href="#" class="dateLink">2015</a>
+            </div>
+            <div id="contentContainer">
+                <!-- <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem Lorem Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div>
+                <div class="contentItem">
+                    <span class="itemYear">2020</span>
+                    <div class="imgWrap">
+                        <div class="itemImage"></div>
+                    </div>
+                    <h2 class="itemTitle">Lorem</h2>
+                    <p class="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius
+                        fugiat voluptates. Sit accusantium laboriosam fugit excepturi nulla non debitis porro saepe.
+                        Nemo esse eligendi sequi at, quo magni corporis?</p>
+                </div> -->
+            </div>
+        </div>
+    </main>
+    <!-- <div class="centered">
+        <div class="blob-1"></div>
+        <div class="blob-2"></div>
+    </div> -->
+
+</body>
+
+</html>

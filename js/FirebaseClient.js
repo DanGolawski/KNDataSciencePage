@@ -64,7 +64,6 @@ class FirebaseClient {
     }
 
 
-
     getDatabaseElements() {
         let elements = [];
         const promiseEvents = this.getElementsFromFolder("Events");
