@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>KN Data Science</title>
+    <link rel="icon" href="./images/logo.png">
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,400' rel='stylesheet' type='text/css'>
     <!-- 	<script type="text/javascript" src="http://www.queness.com/js/bsa.js"></script>	 -->
     <script src="./js/hexagonController.js"></script>
@@ -15,15 +16,15 @@
 
 <body>
     <div id="container">
-
         <!-- hex-1 hex-gap-->
         <div class="hex">
             <div class="inner">
                 <h4>ABOUT US</h4>
                 <!-- <hr /> -->
-                <p>Meet Us here</p>
+                <p>Meet Us Here</p>
             </div>
             <!-- <a href="page.html"></a> -->
+            <div class="popupLauncher" popup="aboutUs"></div>
             <div class="corner-1"></div>
             <div class="corner-2"></div>
         </div>
@@ -35,7 +36,7 @@
                 <!-- <hr /> -->
                 <p>Join Us!</p>
             </div>
-            <a href="#"></a>
+            <div class="popupLauncher" popup="recruitment"></div>
             <div class="corner-1"></div>
             <div class="corner-2"></div>
         </div>
@@ -71,7 +72,7 @@
                 <!-- <hr /> -->
                 <p>Who Support Us</p>
             </div>
-            <a href="#"></a>
+            <a href="page-mentors.html"></a>
             <div class="corner-1"></div>
             <div class="corner-2"></div>
         </div>
@@ -83,7 +84,8 @@
                 <!-- <hr /> -->
                 <p>Let's Stay In Touch</p>
             </div>
-            <a href="page-mentors.html"></a>
+            <!-- <a href="page-mentors.html"></a> -->
+            <div class="popupLauncher" popup="contact"></div>
             <div class="corner-1"></div>
             <div class="corner-2"></div>
         </div>
@@ -132,6 +134,59 @@
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>
 		</div> -->
+    </div>
+
+    <div class="popup" id="aboutUsPopup">
+        <div class="closeButton"></div>
+        <h1>Motto :</h1>
+        <h2>“Live as if you were to die tomorrow. Learn as if you were to live forever.” – Gandhi Mahatma</h2>
+        <h1>Mission :</h1>
+        <h2>The University of Warsaw Data Science Club was founded in 2018 and has since then brought together
+            students who are true Data Science enthusiasts.</h2>
+        <h1>What we do :</h1>
+        <h2>Our members, despite their young age and seniority, stand out with their extensive knowledge in areas
+            such as: Econometrics, Statistics, Machine Learning, Quantitative Finance, Microeconomics and Business
+            Analysis.
+            The mission of the KN Data Science UW is to implement academic and business projects in the area of
+            widely understood Data Science, because we believe that only practical tasks allow us to constantly
+            develop. We want to learn, build experience and have fun with data. Importantly, our circle is
+            international. We bring together students from all over the world! In addition, we receive real scientific
+            support (during problem solving seasons) from our mentors, which is why the products we provide are of
+            the highest possible quality!
+            As part of our expanded activity, we organize open meetings for students of the Faculty of Economic
+            Sciences, University of Warsaw with world-class experts in the field of Data Science.</h2>
+    </div>
+    <div class="popup" id="recruitmentPopup">
+        <div class="closeButton"></div>
+        <h1>Join Us!</h1>
+        <h2>KN Data Science UW recruits all year round. If you want to join us, write to us via Linkedin or call us.
+            (See Contact section)
+            We approach each candidate individually, which is why we do not have a predefined recruitment path.
+            We expect you to be enthusiastic, open minded and enjoy working!</h2>
+    </div>
+    <div class="popup" id="contactPopup">
+        <div class="closeButton"></div>
+        <h1>Contact</h1>
+        <h3>We want to exchange messages as soon as possible. That's why we share you our
+            :</h3>
+        <div class="popupImagesContainer">
+            <div class="popupImage" id="address">
+                <!-- <span class="imageText">Location: Długa 44/50 00-241 Warsaw Poland</span> -->
+                <div class="hoverTextField">
+                    <span class="imageText up">Location :</span>
+                    <span class="imageText center">Długa 44/50 00-241 Warsaw Poland</span>
+                </div>
+            </div>
+            <div class="popupImage" id="phone">
+                <div class="hoverTextField">
+                    <span class="imageText up">Phone :</span>
+                    <span class="imageText center">+48 518 504 403</span>
+                </div>
+            </div>
+            <a class="popupImage" id="linkedin"
+                href="https://www.linkedin.com/company/ko%C5%82o-naukowe-data-science-uniwersytetu-warszawskiego"></a>
+            <!-- <div class="popupImage" id="linkedin"></div> -->
+        </div>
     </div>
 
 </body>

@@ -22,7 +22,7 @@ window.onload = () => {
                 let contentItem = new ContentItem(item, window.innerHeight)
                 observable.addObserver(contentItem);
             }
-
+            observable.notifyWindowChange(window.innerHeight, main.scrollTop);
         });
     }
 
@@ -32,6 +32,8 @@ window.onload = () => {
         itemYear.innerHTML = object.values.date.split('-')[2];
         let imgWrap = createElement('div', 'imgWrap');
         let itemImage = createElement('div', 'itemImage');
+        console.log(object.values.imageURL)
+        itemImage.style.background = `url('${object.values.imageURL}')`;
         let itemTitle = createElement('h2', 'itemTitle');
         itemTitle.innerHTML = object.values.title;
         let itemDescription = createElement('p', 'itemDescription');

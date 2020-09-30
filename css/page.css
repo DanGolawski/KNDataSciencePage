@@ -120,7 +120,7 @@ a {
 }
 
 .itemImage {
-	background-image: url("../images/panamera.jpg");
+	/* background-image: url("../images/panamera.jpg"); */
 	height: calc(100% + 80px);
 	top: -40px;
 	width: 100%;
